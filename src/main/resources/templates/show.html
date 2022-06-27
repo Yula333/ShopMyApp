@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div class="p-2">
+        <h2>Найден по номеру ID</h2>
+    </div>
+
+    <div class="p-2">
+        <a class="h3" th:href="@{/}">Вернуться в каталог</a>
+    </div>
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Цена</th>
+            <th>Дата создания</th>
+            <th>Дата модификации</th>
+        </tr>
+        </thead>
+        <tbody>
+                <tr>
+<!--                    <td th:text="${product.getId()}">VALUE</td>-->
+                    <td>[[${product.id}]]</td>
+                    <td>[[${product.name}]]</td>
+                    <td>[[${product.specification}]]</td>
+                    <td>[[${product.price}]]</td>
+                    <td>[[${product.dateOfCreate}]]</td>
+                    <td>[[${product.dateOfChange}]]</td>
+                </tr>
+        </tbody>
+    </table>
+    </h2>
+</div>
+
+</body>
+</html>
